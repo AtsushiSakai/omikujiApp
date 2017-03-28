@@ -12,6 +12,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var Mylabel: UILabel!
     @IBAction func getOmikuji(_ sender: Any) {
+        let random = arc4random_uniform(10)
+        
+        self.Mylabel.text = String(random)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
