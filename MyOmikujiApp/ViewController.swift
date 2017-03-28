@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        Mylabel.layer.masksToBounds = true
+        Mylabel.layer.cornerRadius = Mylabel.bounds.width / 2
     }
 
     override func didReceiveMemoryWarning() {
