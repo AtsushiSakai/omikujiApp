@@ -12,9 +12,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var Mylabel: UILabel!
     @IBAction func getOmikuji(_ sender: Any) {
-        let random = arc4random_uniform(10)
+        let results = ["大吉", "中吉", "小吉", "吉" , "凶"]
+        let random = arc4random_uniform(UInt32(results.count))
         
-        self.Mylabel.text = String(random)
+        self.Mylabel.text = results[Int(random)]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
